@@ -3,9 +3,11 @@
 }
 
 #app {
-  font-size: 5em;
+  font-size: 3em;
   text-align: center;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #header {
@@ -17,29 +19,65 @@
 #middle {
   height: 60vh;
   width: 100vw;
+  display: flex;
 }
 
 #main {
   width: 80%;
+  display: flex;
 }
 
 #nav {
-  width: 15vw;
+  width: 20vw;
   background-color: #4b4e6d;
 }
 
 #articles {
-  width: 60vw;
+  width: 80vw;
   background-color: #6a8d92;
 }
 
 #ads {
-  width: 15vw;
+  width: 20vw;
   background-color: #f2a541;
 }
 
 #footer {
-  height: 15vh;
+  height: 20vh;
   width: 100vw;
   background-color: #f08a4b;
+}
+
+/*desktop*/
+@media (min-width: 768) and (max-width: 1024px) {
+  #app {
+    flex-direction: column;
+  }
+}
+
+/*tablet*/
+@media (min-width: 601px) and  (max-width: 1000px) {
+  #main {
+    display: flex;
+    flex-direction: row;
+  }
+  #articles {
+    height: 70vh;
+  }
+  #ads {
+    height: 70vh;
+  }
+}
+
+/*mobile*/
+@media (max-width: 400px) {
+  #nav {
+    flex-direction: row;
+  }
+  #articles {
+    flex-direction: row;
+  }
+  #ads {
+    flex-direction: row;
+  }
 }
